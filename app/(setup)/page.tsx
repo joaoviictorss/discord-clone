@@ -2,7 +2,7 @@ import { db } from "@/lib/db";
 import { initialProfile } from "@/lib/initial-profile";
 import { redirect } from "next/navigation";
 
-const SetuPage = async () => {
+const SetupPage = async () => {
   const profile = await initialProfile();
 
   const server = await db.server.findFirst({
@@ -22,4 +22,4 @@ const SetuPage = async () => {
   return <div>Crie um servidor</div>;
 };
 
-export default SetuPage;
+export default SetupPage;
